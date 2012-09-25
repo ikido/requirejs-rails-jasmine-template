@@ -15,6 +15,7 @@
 
   <script type="text/javascript">
     var jsApiReporter;
+    var execJasmine;
     (function() {
       var jasmineEnv = jasmine.getEnv();
 
@@ -28,16 +29,7 @@
         return htmlReporter.specFilter(spec);
       };
 
-      var currentWindowOnload = window.onload;
-
-      window.onload = function() {
-        if (currentWindowOnload) {
-          currentWindowOnload();
-        }
-        execJasmine();
-      };
-
-      function execJasmine() {
+      execJasmine = function() {
         jasmineEnv.execute();
       }
 
@@ -49,8 +41,10 @@
   <% end %>
 
   <% extend RequirejsHelper %>
-  <% RequirejsHelper._priority = @config.spec_files.map { |s| s.sub(/\.js$/,'') } %>
   <%= requirejs_include_tag %>
+  <script>
+    require(<%= @config.spec_files.map { |s| s.sub(/\.js$/,'') }.to_json %>, function(){execJasmine()});
+  </script>
 
 </head>
 <body>

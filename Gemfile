@@ -7,7 +7,7 @@ gem 'rails', '3.2.3'
 
 gem 'sqlite3'
 
-gem 'requirejs-rails', '~> 0.8.0'
+gem 'requirejs-rails', '~> 0.9.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
