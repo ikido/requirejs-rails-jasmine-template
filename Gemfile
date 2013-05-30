@@ -24,7 +24,7 @@ end
 gem 'jquery-rails'
 
 group :development, :test do
-  gem 'jasmine', :git => 'git://github.com/pivotal/jasmine-gem.git'
+  gem 'jasmine', :git => 'git://github.com/pivotal/jasmine-gem.git', :ref => 'c72e8d248d49a1ebe53f31a09ac511194ad4edf1'
 end
 
 # To use ActiveModel has_secure_password
