@@ -29,6 +29,8 @@ group :development, :test do
   gem 'jasmine', '~> 1.2.1'
 end
 
+gem "rails-backbone"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
