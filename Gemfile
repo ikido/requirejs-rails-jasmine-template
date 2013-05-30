@@ -7,7 +7,7 @@ gem 'rails', '3.2.3'
 
 gem 'sqlite3'
 
-gem 'requirejs-rails', '~> 0.8.0'
+gem 'requirejs-rails', '~> 0.9.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -24,7 +24,7 @@ end
 gem 'jquery-rails'
 
 group :development, :test do
-  gem 'jasmine', :git => 'git://github.com/pivotal/jasmine-gem.git', :ref => 'c72e8d248d49a1ebe53f31a09ac511194ad4edf1'
+  gem 'jasmine', '~> 1.2.1'
 end
 
 # To use ActiveModel has_secure_password
