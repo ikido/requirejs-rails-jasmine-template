@@ -70,7 +70,7 @@ end
 
 ### Run the jasmine generator
 
-```rake g jasmine:install```
+```rails g jasmine:install```
 
 ### Update development asset paths
 
